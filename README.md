@@ -22,7 +22,7 @@ The project connects **AI reasoning** with **finite element analysis**, enabling
 All triggered through **natural-language input**.
 
 The original project repository is hosted by Saeideh:  
-👉 *(link to Saeideh’s repo)*
+👉 [*(link to Saeideh’s repo)*](https://github.com/smohammadikish/training)
 
 ---
 
