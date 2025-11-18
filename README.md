@@ -150,17 +150,19 @@ load 1300 N at the free end
 ```mermaid
 flowchart LR
 
-    A([User Request]) --> B([LLM Agent])
+    A([User Request])
+    B([LLM Agent])
+    C{Tool Selection}
 
-    B --> C{Tool Selection}
+    G[Geometry Generator (Gmsh)]
+    M[Mesh Generator]
+    D[COMM Generator]
+    E[Export File Generator]
+    F[Code_Aster Solver]
+    H([Visualization & Outputs])
 
-    subgraph Tools
-        G[Geometry Generator<br/>(Gmsh)]
-        M[Mesh Generator]
-        D[COMM Generator]
-        E[Export File Generator]
-        F[Code_Aster Solver]
-    end
+    A --> B
+    B --> C
 
     C --> G
     C --> M
@@ -168,7 +170,7 @@ flowchart LR
     C --> E
     C --> F
 
-    G --> M --> D --> E --> F --> H([Visualization & Outputs])
+    G --> M --> D --> E --> F --> H
 ```
 
 ---
