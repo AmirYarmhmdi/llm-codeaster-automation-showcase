@@ -145,8 +145,6 @@ load 1300 N at the free end
 6. Code_Aster execution  
 7. Plot and result generation  
 
----
-
 ## 🧱 System Architecture (High-Level)
 
 ```mermaid
@@ -158,7 +156,7 @@ B --> C{Tool Selection}
 C -->|Geometry| G[Geometry Generator (Gmsh)]
 C -->|Mesh| M[Mesh Generator]
 C -->|COMM| D[COMM Generator]
-C -->|Export| E[Export Generator]
+C -->|Export| E[Export File Generator]
 C -->|Run| F[Code_Aster Solver]
 
 F --> H[Visualization & Outputs]
@@ -167,6 +165,7 @@ G --> M --> D --> E --> F
 ```
 
 ---
+
 
 ## 📌 Features
 
