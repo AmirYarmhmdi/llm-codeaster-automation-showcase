@@ -157,7 +157,6 @@ graph LR
     B <--> E[Export Generator]
     B <--> F[Code_Aster Solver]
     B <--> H[Visualization & Outputs]
-    H <--> B[LLM Agent]
 ```
 
 ---
