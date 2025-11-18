@@ -149,14 +149,17 @@ load 1300 N at the free end
 
 ```mermaid
 graph LR
-    A[User Request] --> B[LLM Agent]
+    A[User] --> B[LLM Agent]
+    
     B --> C{Tool Selection}
-    C --> G[Geometry Generator]
-    C --> M[Mesh Generator]
-    C --> D[COMM Generator]
-    C --> E[Export Generator]
-    C --> F[Code_Aster Solver]
-    F --> H[Visualization & Outputs]
+    B --> G[Geometry Generator]
+    B --> M[Mesh Generator]
+    B --> D[COMM Generator]
+    B --> E[Export Generator]
+    B --> F[Code_Aster Solver]
+    B --> H[Visualization & Outputs]
+    H --> B[LLM Agent]
+    B --> A[User]
     G --> M --> D --> E --> F
 ```
 
