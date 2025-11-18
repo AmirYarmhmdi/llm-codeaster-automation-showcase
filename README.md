@@ -122,20 +122,18 @@ workspace/
  └── results/
 ```
 
-This ensured clarity, consistency, and repeatability across the pipeline.
-
 ---
 
 ## 🧪 Example Workflow
 
-### 🧑‍💻 User Input
+### User Input
 
 ```text
 simulate a 5m concrete beam, rectangular section 0.35m x 0.25m,
 load 1300 N at the free end
 ```
 
-### 🔄 Automated by the LLM:
+### Automated by the LLM:
 
 1. Parameter extraction  
 2. Geometry generation  
@@ -150,23 +148,20 @@ load 1300 N at the free end
 ## 🧱 System Architecture (High-Level)
 
 ```mermaid
-flowchart LR
+flowchart LR;
 
-%% -------------------------
-A[User Request] --> B[LLM Agent (OpenAI)]
-%% -------------------------
-B --> C{Tool Selection}
-%% -------------------------
+A[User Request] --> B[LLM Agent (OpenAI)];
+B --> C{Tool Selection};
 
-C -->|Geometry| G[Geometry Generator (Gmsh)]
-C -->|Mesh| M[Mesh Generator]
-C -->|COMM| D[COMM Generator]
-C -->|Export| E[Export File Generator]
-C -->|Run| F[Code_Aster Solver]
+C -->|Geometry| G[Geometry Generator (Gmsh)];
+C -->|Mesh| M[Mesh Generator];
+C -->|COMM| D[COMM Generator];
+C -->|Export| E[Export File Generator];
+C -->|Run| F[Code_Aster Solver];
 
-F --> H[Visualization & Outputs]
+F --> H[Visualization & Outputs];
 
-G --> M --> D --> E --> F
+G --> M --> D --> E --> F;
 ```
 
 ---
@@ -184,8 +179,6 @@ G --> M --> D --> E --> F
 
 ## 📸 Screenshots
 
-(Place your images inside an `images/` folder. For example:)
-
 ```
 images/
  ├── pipeline_run.png
@@ -199,19 +192,8 @@ images/
 
 Developed collaboratively with:
 
-- **Saeideh Mohammadikish**  
-  (host of the main repository)
-
-Her full project repository:  
-👉 https://github.com/smohammadikish/training
-
----
-
-## 👨‍💻 Authors
-
 **Amir Yarmohamadi**  
-**Saeideh Mohammadikish**  
-Structural Engineer → AI & Computational Mechanics
+**Saeideh Mohammadikish**
 
 ---
 
